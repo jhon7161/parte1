@@ -1,6 +1,10 @@
 import { useState } from "react";
 
 const Statistics = ({ good, neutral, bad, total, average, positive }) => {
+  if (total === 0) {
+    return <p>No feedback given</p>;
+  }
+
   return (
     <>
       <h1>statistics</h1>
@@ -54,3 +58,4 @@ const App = () => {
 };
 
 export default App;
+
